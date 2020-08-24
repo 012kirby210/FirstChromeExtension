@@ -11,17 +11,31 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/icon16.png",
-      "32": "images/icon32.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
+      "16": "images/page_action_icon16.png",
+      "32": "images/page_action_icon32.png",
+      "48": "images/page_action_icon48.png",
+      "128": "images/page_action_icon128.png"
     }
   },
   "icons": {
-    "16": "images/icon16.png",
-    "32": "images/icon32.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
+    "16": "images/detail_icon16.png",
+    "32": "images/detail_icon32.png",
+    "48": "images/detail_icon48.png",
+    "128": "images/detail_icon128.png"
   },
-  "options_page": "options.html"
+  "options_page": "options.html",
+  "applications": {
+    "gecko": {
+      "id": "PremierExtension@kirby.com"
+    }
+  },
+  "browser_action":{
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/browser_action_icon16.png",
+      "32": "images/browser_action_icon32.png",
+      "48": "images/browser_action_icon48.png",
+      "128": "images/browser_action_icon128.png"
+    }
+  }
 }
