@@ -11,3 +11,5 @@ https://www.mozilla.org/fr/firefox/developer/
 * https://support.mozilla.org/fr/kb/signature-modules-complementaires-firefox
 
 Le fichier xpi est un fichier zippé contenant la racine du projet dont l'extension zip a été renommée en xpi.
+
+Certaines fonctionnalités provenant de chromium résidant sous le namespace chrome peuvent ne pas être compatible avec firefox, pour tester la compatibilité d'une extension : https://www.extensiontest.com/
