@@ -5,23 +5,38 @@ chrome.runtime.onInstalled.addListener(function(){
     console.log("The color key has been set.");
   });
 
-  let pageActionRule =
-  {
-    conditions: [
-      new chrome.declarativeContent.PageStateMatcher(
-        {
-          pageUrl: {
-            hostEquals: 'developer.chrome.com',
-            schemes: ['https']
-          }
-        }
-      )
-    ],
-    actions: [
-      new chrome.declarativeContent.ShowPageAction()
-    ]
-  };
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function(){
-    chrome.declarativeContent.onPageChanged.addRules([pageActionRule]);
-  });
+  chrome.webRequest.onCompleted.addListener(
+    function(details){
+      console.log('webRequest');
+      console.log(details);
+      if (details.tabId >= 0 ) {
+        chrome.pageAction.show(details.tabId);
+      }
+    }, {urls: ['https://developer.mozilla.org/*']}
+  );
+  /*let urlFilters = { urls: ['https://developer.mozilla.org/*']};
+  chrome.tabs.onUpdated.addListener(
+    function(tabId, changeInfo, tabInfo, urlFilters){
+        console.log(tabInfo);
+        chrome.pageAction.show(tabId);
+    }
+  );*/
+
+  let statusFilter = { properties: ['status']};
+  chrome.tabs.onUpdated.addListener(
+    function(tabId, changeInfo, tabInfo, statusFilter){
+      if (changeInfo.status === 'loading'){
+        chrome.pageAction.hide(tabId);
+      }
+    }
+  );
+
+  function logTabs(tabs) {
+    let tab = tabs[0]; // Safe to assume there will only be one result
+    console.log(tab.url);
+}
+
+browser.tabs.query({currentWindow: true, active: true}).then(logTabs, console.error);
+
+
 });
