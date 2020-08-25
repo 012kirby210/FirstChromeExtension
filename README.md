@@ -15,3 +15,9 @@ Le fichier xpi est un fichier zippé contenant la racine du projet dont l'extens
 Certaines fonctionnalités provenant de chromium résidant sous le namespace chrome peuvent ne pas être compatibles avec firefox, pour tester la compatibilité d'une extension : https://www.extensiontest.com/.
 
 Plus de détails ici : https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilit%C3%A9s_Chrome
+
+2 branches :
+* firefox-spe : pour les spécificités firefox
+* chrome-spe : pour les spécificatés chrome
+
+À venir une branch polyfill qui va suivre master.
