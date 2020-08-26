@@ -23,7 +23,9 @@
     "48": "images/detail_icon48.png",
     "128": "images/detail_icon128.png"
   },
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html"
+  },
   "applications": {
     "gecko": {
       "id": "PremierExtension@kirby.com"
