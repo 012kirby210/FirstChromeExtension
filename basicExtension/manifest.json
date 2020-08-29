@@ -24,7 +24,7 @@
     "128": "images/detail_icon128.png"
   },
   "options_ui": {
-    "page": "options.html"
+    "page": "option_index.html"
   },
   "applications": {
     "gecko": {
