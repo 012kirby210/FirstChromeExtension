@@ -1,5 +1,6 @@
 import SimpleForm from "./js/components/SimpleForm.js";
 import { Clock } from "./js/components/Clock.js";
+import { Button } from "./js/components/Button.js";
 import React from 'react';
 import ReactDOM from "react-dom";
 
