@@ -3,6 +3,7 @@ import { Clock } from "./js/components/Clock.js";
 import { Button } from "./js/components/Button.js";
 import { Formulaire } from "./js/components/Formulaire.js";
 import { Selection } from "./js/components/Selection.js";
+import { LoadBay } from "./js/components/LoadBay.js";
 import React from 'react';
 import ReactDOM from "react-dom";
 
@@ -18,3 +19,6 @@ let listeASelectionner = {
 };
 ReactDOM.render(<Selection selectionName="ppList" selectionElements={listeASelectionner} />,
 document.getElementById('selection-container'))
+ReactDOM.render(<LoadBay inputId="identifiant-loadbay" inputLabel="Valeur à envoyer" method="POST"
+url="http://localhost:7900/server.php" buttonLabel="Envoyer"/>,
+document.getElementById('loading-bay-container'));
