@@ -21,3 +21,5 @@ Plus de détails ici : https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/Web
 * chrome-spe : pour les spécificatés chrome
 
 À venir une branch polyfill qui va suivre master.
+
+En test : vérification du comportement de l'intégration de Reactjs dans les extensions de navigateur.
